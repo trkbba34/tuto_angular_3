@@ -1,1 +1,26 @@
-<p>new-ticket works!</p>
+<form (ngSubmit)="onSubmit()" #form>
+  <app-control label="Title">
+    <input
+      name="title"
+      id="title"
+      #input
+      [(ngModel)]="entredTitle"
+    />
+  </app-control>
+
+  <app-control label="Request">
+    <textarea
+      name="request"
+      id="request"
+      rows="3"
+      #input
+      [(ngModel)]="entredText"
+    ></textarea>
+  </app-control>
+
+  <p>
+    <button type="submit" appButton>
+      Submit <span ngProjectAs="icon">⌲</span>
+    </button>
+  </p>
+</form>
